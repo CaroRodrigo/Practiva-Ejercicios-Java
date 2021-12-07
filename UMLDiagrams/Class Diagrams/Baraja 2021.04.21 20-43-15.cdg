@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Baraja">
+  <ClassDiagramComponents>
+    <Class name="Baraja" package="Baraja" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="num" type="Integer" visibility="private"/>
+        <Field name="palos" type="Palo" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="num"/>
+          <Argument type="Palo" name="palos"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getNum" returnType="Integer" visibility="public"/>
+        <Method name="setNum" returnType="void" visibility="public">
+          <Argument type="Integer" name="num"/>
+        </Method>
+        <Method name="getPalos" returnType="Palo" visibility="public"/>
+        <Method name="setPalos" returnType="void" visibility="public">
+          <Argument type="Palo" name="palos"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

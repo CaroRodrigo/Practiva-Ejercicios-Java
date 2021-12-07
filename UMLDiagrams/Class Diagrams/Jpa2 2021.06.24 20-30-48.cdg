@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Jpa2">
+  <ClassDiagramComponents>
+    <Class name="AutorDao" package="jpa2.libreria.dao" visibility="public" xPosition="66.0" yPosition="179.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="crearAutor" returnType="Autor" visibility="public">
+          <Argument type="Autor" name="autor"/>
+        </Method>
+        <Method name="EliminarPorId" returnType="void" visibility="public">
+          <Argument type="Autor" name="autor"/>
+        </Method>
+        <Method name="EliminarAutorPorNombre" returnType="void" visibility="public">
+          <Argument type="Autor" name="autor"/>
+        </Method>
+        <Method name="ModificarAutor" returnType="Autor" visibility="public">
+          <Argument type="Autor" name="autor"/>
+        </Method>
+        <Method name="mostrarAutores" returnType="List&lt;Autor&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ClienteDao" package="jpa2.libreria.dao" visibility="public" xPosition="690.0" yPosition="305.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="crearCliente" returnType="Cliente" visibility="public">
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="EliminarCliente" returnType="Cliente" visibility="public">
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="ModificarCliente" returnType="Cliente" visibility="public">
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="mostrarClientees" returnType="List&lt;Cliente&gt;" visibility="public"/>
+        <Method name="buscarClientePorDni" returnType="Cliente" visibility="public">
+          <Argument type="Long" name="dni"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Dao" package="jpa2.libreria.dao" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="em" type="EntityManager" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="EditoralDao" package="jpa2.libreria.dao" visibility="public" xPosition="1340.0" yPosition="57.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="crearEditorial" returnType="Editorial" visibility="public">
+          <Argument type="Editorial" name="editorial"/>
+        </Method>
+        <Method name="EliminarEditorial" returnType="Editorial" visibility="public">
+          <Argument type="Editorial" name="editorial"/>
+        </Method>
+        <Method name="ModificarEditorial" returnType="Editorial" visibility="public">
+          <Argument type="Editorial" name="editorial"/>
+        </Method>
+        <Method name="mostrarEditoriales" returnType="List&lt;Editorial&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="LibroDao" package="jpa2.libreria.dao" visibility="public" xPosition="1429.0" yPosition="614.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="crearLibro" returnType="Libro" visibility="public">
+          <Argument type="Libro" name="libro"/>
+        </Method>
+        <Method name="EliminarLibro" returnType="Libro" visibility="public">
+          <Argument type="Libro" name="libro"/>
+        </Method>
+        <Method name="ModificarLibro" returnType="Libro" visibility="public">
+          <Argument type="Libro" name="libro"/>
+        </Method>
+        <Method name="mostrarLibroes" returnType="List&lt;Libro&gt;" visibility="public"/>
+        <Method name="EliminarLibroPorNombre" returnType="void" visibility="public">
+          <Argument type="Libro" name="libro"/>
+        </Method>
+        <Method name="EliminarPorId" returnType="void" visibility="public">
+          <Argument type="Libro" name="libro"/>
+        </Method>
+        <Method name="buscarLibroPorTitulo" returnType="Libro" visibility="public">
+          <Argument type="String" name="titulo"/>
+        </Method>
+        <Method name="buscarLibroPorIsbn" returnType="Libro" visibility="public">
+          <Argument type="Long" name="isbn"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PrestamoDao" package="jpa2.libreria.dao" visibility="public" xPosition="384.0" yPosition="261.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="crearPrestamo" returnType="Prestamo" visibility="public">
+          <Argument type="Prestamo" name="prestamo"/>
+        </Method>
+        <Method name="EliminarPrestamo" returnType="Prestamo" visibility="public">
+          <Argument type="Prestamo" name="prestamo"/>
+        </Method>
+        <Method name="ModificarPrestamo" returnType="Prestamo" visibility="public">
+          <Argument type="Prestamo" name="prestamo"/>
+        </Method>
+        <Method name="mostrarPrestamoes" returnType="List&lt;Prestamo&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Autor" package="jpa2.libreria.entidades" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="id" type="Long" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Long" name="id"/>
+          <Argument type="String" name="nombre"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="Long" name="id"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Cliente" package="jpa2.libreria.entidades" visibility="public" xPosition="1478.0" yPosition="240.0">
+      <Fields>
+        <Field name="documento" type="Long" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="domicilio" type="String" visibility="private"/>
+        <Field name="telefono" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Long" name="documento"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="domicilio"/>
+          <Argument type="String" name="telefono"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="Long" name="documento"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="Long" name="documento"/>
+          <Argument type="String" name="nombre"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDocumento" returnType="Long" visibility="public"/>
+        <Method name="setDocumento" returnType="void" visibility="public">
+          <Argument type="Long" name="documento"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getDomicilio" returnType="String" visibility="public"/>
+        <Method name="setDomicilio" returnType="void" visibility="public">
+          <Argument type="String" name="domicilio"/>
+        </Method>
+        <Method name="getTelefono" returnType="String" visibility="public"/>
+        <Method name="setTelefono" returnType="void" visibility="public">
+          <Argument type="String" name="telefono"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Editorial" package="jpa2.libreria.entidades" visibility="public" xPosition="1258.0" yPosition="334.0">
+      <Fields>
+        <Field name="id" type="Long" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Libro" package="jpa2.libreria.entidades" visibility="public" xPosition="940.0" yPosition="903.0">
+      <Fields>
+        <Field name="isbn" type="Long" visibility="private"/>
+        <Field name="titulo" type="String" visibility="private"/>
+        <Field name="anio" type="Integer" visibility="private"/>
+        <Field name="ejemplares" type="Integer" visibility="private"/>
+        <Field name="prestados" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Long" name="isbn"/>
+          <Argument type="String" name="titulo"/>
+          <Argument type="Integer" name="anio"/>
+          <Argument type="Integer" name="ejemplares"/>
+          <Argument type="Integer" name="prestados"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="Long" name="isbn"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="titulo"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getIsbn" returnType="Long" visibility="public"/>
+        <Method name="setIsbn" returnType="void" visibility="public">
+          <Argument type="Long" name="isbn"/>
+        </Method>
+        <Method name="getTitulo" returnType="String" visibility="public"/>
+        <Method name="setTitulo" returnType="void" visibility="public">
+          <Argument type="String" name="titulo"/>
+        </Method>
+        <Method name="getAnio" returnType="Integer" visibility="public"/>
+        <Method name="setAnio" returnType="void" visibility="public">
+          <Argument type="Integer" name="anio"/>
+        </Method>
+        <Method name="getEjemplares" returnType="Integer" visibility="public"/>
+        <Method name="setEjemplares" returnType="void" visibility="public">
+          <Argument type="Integer" name="ejemplares"/>
+        </Method>
+        <Method name="getPrestados" returnType="Integer" visibility="public"/>
+        <Method name="setPrestados" returnType="void" visibility="public">
+          <Argument type="Integer" name="prestados"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Prestamo" package="jpa2.libreria.entidades" visibility="public" xPosition="400.0" yPosition="649.0">
+      <Fields>
+        <Field name="id" type="Long" visibility="private"/>
+        <Field name="fecha" type="Date" visibility="private"/>
+        <Field name="devolucion" type="Date" visibility="private"/>
+        <Field name="libro" type="Libro" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Date" name="fecha"/>
+          <Argument type="Date" name="devolucion"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Long" name="id"/>
+          <Argument type="Date" name="fecha"/>
+          <Argument type="Date" name="devolucion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Jpa2Libreria" package="jpa2.libreria" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AutorServicio" package="jpa2.libreria.servicio" visibility="public" xPosition="262.0" yPosition="464.0">
+      <Fields>
+        <Field name="autordao" type="AutorDao" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="crearAutor" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="mostrarAutores" returnType="void" visibility="public"/>
+        <Method name="eliminarAutorPorNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="eliminarAutorPorId" returnType="void" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ClienteServicio" package="jpa2.libreria.servicio" visibility="public" xPosition="930.0" yPosition="642.0">
+      <Fields>
+        <Field name="clientedao" type="ClienteDao" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="crearCliente" returnType="void" visibility="public">
+          <Argument type="Long" name="dni"/>
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="mostrarClientes" returnType="void" visibility="public"/>
+        <Method name="eliminarClientePorId" returnType="void" visibility="public">
+          <Argument type="Long" name="dni"/>
+        </Method>
+        <Method name="buscarClientePorDni" returnType="void" visibility="public">
+          <Argument type="Long" name="dni"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EditorialServicio" package="jpa2.libreria.servicio" visibility="public" xPosition="1820.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="LibroServicio" package="jpa2.libreria.servicio" visibility="public" xPosition="2120.0" yPosition="420.0">
+      <Fields>
+        <Field name="librodao" type="LibroDao" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="crearLibro" returnType="void" visibility="public">
+          <Argument type="Long" name="isbn"/>
+          <Argument type="String" name="titulo"/>
+          <Argument type="Integer" name="anio"/>
+          <Argument type="Integer" name="ejemplares"/>
+          <Argument type="Integer" name="prestados"/>
+        </Method>
+        <Method name="mostrarLibros" returnType="void" visibility="public"/>
+        <Method name="eliminarLibroPorNombre" returnType="void" visibility="public">
+          <Argument type="String" name="titulo"/>
+        </Method>
+        <Method name="eliminarLibroPorId" returnType="void" visibility="public">
+          <Argument type="Long" name="isbn"/>
+        </Method>
+        <Method name="buscarLibroPorTitulo" returnType="void" visibility="public">
+          <Argument type="String" name="titulo"/>
+        </Method>
+        <Method name="buscarLibroPorIsbn" returnType="void" visibility="public">
+          <Argument type="Long" name="isbn"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PrestamoServicio" package="jpa2.libreria.servicio" visibility="public" xPosition="20.0" yPosition="820.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="libro" source="jpa2.libreria.entidades.Prestamo" target="jpa2.libreria.entidades.Libro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="jpa2.libreria.dao.PrestamoDao" target="jpa2.libreria.entidades.Prestamo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="jpa2.libreria.dao.EditoralDao" target="jpa2.libreria.entidades.Editorial" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="jpa2.libreria.dao.LibroDao" target="jpa2.libreria.entidades.Libro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="jpa2.libreria.dao.EditoralDao" target="jpa2.libreria.dao.Dao"/>
+    <HasRelation name="librodao" source="jpa2.libreria.servicio.LibroServicio" target="jpa2.libreria.dao.LibroDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="autordao" source="jpa2.libreria.servicio.AutorServicio" target="jpa2.libreria.dao.AutorDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="jpa2.libreria.dao.AutorDao" target="jpa2.libreria.dao.Dao"/>
+    <IsRelation name="is" source="jpa2.libreria.dao.ClienteDao" target="jpa2.libreria.dao.Dao"/>
+    <UseRelation source="jpa2.libreria.dao.ClienteDao" target="jpa2.libreria.entidades.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="jpa2.libreria.dao.LibroDao" target="jpa2.libreria.dao.Dao"/>
+    <HasRelation name="clientedao" source="jpa2.libreria.servicio.ClienteServicio" target="jpa2.libreria.dao.ClienteDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="jpa2.libreria.dao.AutorDao" target="jpa2.libreria.entidades.Autor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="jpa2.libreria.dao.PrestamoDao" target="jpa2.libreria.dao.Dao"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
